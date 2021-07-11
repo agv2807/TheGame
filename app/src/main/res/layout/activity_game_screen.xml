@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:id="@+id/players_table"
+        android:orientation="vertical"
+        android:visibility="gone"
+        android:background="@drawable/round_corners_for_list"
+        android:layout_margin="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/players_list"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="20dp">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/cancel_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/cancel_icon" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/up_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/players_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/group_icon"
+            android:layout_margin="20dp"/>
+
+        <ImageView
+            android:id="@+id/edit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="20dp"
+            app:srcCompat="@drawable/edit_icon" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/center_cont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/player_task"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:text="Очередь игрока Яичко"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+            <TextView
+                android:id="@+id/hod_tv"
+                android:textStyle="bold"
+                android:textSize="26sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:id="@+id/task_tv"
+                android:textSize="18sp"
+                android:padding="10dp"
+                android:layout_margin="20dp"
+                android:textColor="@color/black"
+                android:background="@drawable/round_corners"
+                android:text="Выбирай быстрее"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_margin="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/greenBtn"
+                    android:background="@drawable/round_corners"
+                    android:textSize="20sp"
+                    android:text="2 очка"
+                    app:backgroundTint="@color/green"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp">
+                </Space>
+
+                <Button
+                    android:id="@+id/yellowBtn"
+                    android:text="4 очка"
+                    android:background="@drawable/round_corners"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/yellow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <Space
+                    android:layout_width="wrap_content"
+                    android:layout_height="5dp">
+                </Space>
+
+                <Button
+                    android:id="@+id/redBtn"
+                    android:text="6 очков"
+                    android:background="@drawable/round_corners"
+                    android:textSize="20sp"
+                    app:backgroundTint="@color/red"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/punishment_btn"
+                android:text="статья"
+                android:background="@drawable/round_corners"
+                android:layout_marginStart="15dp"
+                android:layout_gravity="center"
+                android:textSize="30sp"
+                app:backgroundTint="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/complete_btn"
+        android:background="@drawable/round_corners"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:text="закончить ход"
+        android:textSize="20sp"
+        app:backgroundTint="@color/green"/>
+
+</RelativeLayout>
